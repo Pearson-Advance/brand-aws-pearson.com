@@ -1,0 +1,13 @@
+// Style overrides for Learning and Discussion MFE.
+
+body #root {
+    // LEARNING INSTRUCTOR TOOLBAR.
+    div[data-testid="instructor-toolbar"]>div {
+        background-color: $brand !important;
+    }
+
+    // LEARNING MAIN CONTENT.
+    header.learning-header ~ main { // Selector to specifically select the main content of the learning MFE.
+        min-height: 100vh;
+    }
+}
