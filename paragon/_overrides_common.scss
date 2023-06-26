@@ -1,8 +1,30 @@
 // Gradebook, Profile and Account MFE overrides.
 
 body #root {
+    font-family: "Open Sans";
+
+    header.site-header-desktop,
+    header.site-header-mobile {
+        font-size: 1rem;
+
+        a.logo {
+            margin: 0.5rem;
+
+            img {
+                height: 135%;
+            }
+        }
+    }
+
     header.site-header-desktop ~ main,
     header.site-header-mobile ~ main { // Selector to specifically select the the standard MFE header.
         min-height: 100vh;
+    }
+
+    header.site-header-desktop ~ footer,
+    header.site-header-mobile ~ footer { // Selector to specifically select the the standard MFE footer
+        img {
+            max-height: 35px !important;
+        }
     }
 }

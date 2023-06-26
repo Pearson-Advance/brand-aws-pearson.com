@@ -1,6 +1,27 @@
 // Style overrides for Learning and Discussion MFE.
 
 body #root {
+    font-family: "Open Sans";
+
+    // LEARNING HEADER OVERRIDES
+    header.learning-header {
+        font-size: 1rem;
+
+        span, a {
+            &.d-block.small {
+                display: none !important;
+            }
+        }
+
+        a.logo {
+            margin: 1rem 1rem 2rem 1rem;
+
+            img {
+                height: 135%;
+            }
+        }
+    }
+
     // LEARNING INSTRUCTOR TOOLBAR.
     div[data-testid="instructor-toolbar"]>div {
         background-color: $brand !important;
@@ -9,5 +30,11 @@ body #root {
     // LEARNING MAIN CONTENT.
     header.learning-header ~ main { // Selector to specifically select the main content of the learning MFE.
         min-height: 100vh;
+    }
+
+    header.learning-header ~ footer { // Selector to specifically select the footer of the learning MFE
+        img {
+            max-height: 35px !important;
+        }
     }
 }
